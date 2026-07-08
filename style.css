@@ -5,21 +5,43 @@ body  {
   color: #515076;
 }
 
+.products-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 45px;
+  margin: 0 auto;
+  max-width: 1300px;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: auto;
+}
+
+
 .title {
-  font-family: 'Arial', sans-serif;
   font-weight: 400;
   font-size: 70px;
   line-height: 78px;
   text-align: center;
-  margin: 0;
+  margin-top: 220px;
 }
 
 .card {
   width: 300px;
+  height: 533px;
   background-color: #F7F7FA;
-  margin: 10px;
-  padding: 10px;
-  margin-bottom: 40px;
+  margin: 0;
+  padding: 20px;
+}
+
+.card img {
+  display: block;
+  margin: auto;
 }
 
 .grey {
