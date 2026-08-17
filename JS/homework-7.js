@@ -11,12 +11,12 @@ console.log(getTemperatureCity("Новосибирск", 10));
 
 const SPEED_JIGHT = 299792458;
 
-function checkTheSpeed(Speed) {
+function checkTheSpeed(speed) {
 
-  if (SPEED_JIGHT < Speed) {
+  if (SPEED_JIGHT < speed) {
     console.log("Сверхсветовая скорость");
   }
-  else if (SPEED_JIGHT > Speed) {
+  else if (SPEED_JIGHT > speed) {
     console.log("Субсветовая скорость");
   }
   else {
