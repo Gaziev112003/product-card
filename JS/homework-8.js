@@ -129,12 +129,8 @@ function getRareCars(objCars) {
   return objCars.map(function (car) {
     const updatedAllCar = { ...car };
 
-    if (updatedAllCar.circulation === 'limited') {
-      updatedAllCar.isRare = true;
-    }
-    else {
-      updatedAllCar.isRare = false;
-    }
+    updatedAllCar.isRare = updatedAllCar.circulation === 'limited' ? true : false;
+
     return updatedAllCar;
   });
 }
@@ -142,6 +138,3 @@ function getRareCars(objCars) {
 // Вызов функции
 
 const updatedAllCar = getRareCars(allCars);
-
-
-
