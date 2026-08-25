@@ -126,13 +126,12 @@ const allCars = [...carList, ...superCarList];
 // 10. Почитать про метод массива — map. Написать функцию.
 
 function getRareCars(objCars) {
-  return objCars.map(function (car) {
-    const updatedAllCar = { ...car };
-
-    updatedAllCar.isRare = updatedAllCar.circulation === 'limited' ? true : false;
-
-    return updatedAllCar;
-  });
+  return objCars.map((car) => {
+  return {
+    ...car,
+    isRare: car.circulation === 'limited' ? true : false
+  };
+});
 }
 
 // Вызов функции
