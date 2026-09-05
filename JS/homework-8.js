@@ -23,7 +23,7 @@ const carInfo = {
 
 // Добавляем объект userProfile в объект carInfo
 
-carInfo.owner = userProfile,
+carInfo.owner = userProfile;
 
   // 5. Создайте функцию, которая будет проверять наличие свойства "maxSpeed".
 
