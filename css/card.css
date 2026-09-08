@@ -22,12 +22,10 @@
   font-size: 20px;
   line-height:27px;
   margin: 5px 0 5px 0;
-  
-}
+} 
 
 .card__description {
   margin-top: 5px;
-
 }
 
 .card__description p:first-child {

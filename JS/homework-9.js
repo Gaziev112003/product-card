@@ -90,7 +90,7 @@ const emailsWithReduce = socialComments.reduce((acc, comment) => {
   return acc;
 }, []);
 
-console.log(emailsWithReduce);
+console.log(emailsWithReduce); 
 
 // 12.
 // Вариант через .toString()
