@@ -28,12 +28,12 @@ console.log(findIslamBooks);
 
 // 4.
 
-function arrReverse(arr) {
+function getArrReverse(arr) {
   return arr.reverse();
 }
 
-arrReverse(islamBooks);
-arrReverse(numbers);
+getArrReverse(islamBooks);
+getArrReverse(numbers);
 
 console.log(islamBooks);
 console.log(numbers);
@@ -67,12 +67,12 @@ console.log(lightSocialComments);
 
 // 10.
 
-const checkedSocialComments = socialComments.map(comment => {
+const validatedComments = socialComments.map(comment => {
   comment.isInvalid = comment.body.length > 180 ? true : false;
   return comment;
 });
 
-console.log(checkedSocialComments);
+console.log(validatedComments);
 
 // 11.
 // Вариант через .map()
