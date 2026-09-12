@@ -17,7 +17,7 @@ const grColor = '#bce0b0';
 buttonChangeColorCards.addEventListener('click', () => {
   productCards.forEach((card) => card.style.backgroundColor = grColor);
 });
-
+ 
 // Открыть Google
 
 const buttonOpenGoogle = document.querySelector('.buttons__open_google');
