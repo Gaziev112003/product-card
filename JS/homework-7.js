@@ -22,7 +22,7 @@ function checkTheSpeed(speed) {
   else {
     console.log("Скорость света");
   }
-}
+} 
 
 checkTheSpeed(300000000)
 

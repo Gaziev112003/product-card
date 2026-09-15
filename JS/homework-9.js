@@ -13,7 +13,8 @@ console.log(fiveNumbers);
 
 // 3.
 
-const islamBooks = ["Три основы",
+const islamBooks = [
+  "Три основы",
   "40 хадисов ан-Навави",
   "Сира пророка",
   "40 аль-Кудси",
@@ -27,10 +28,15 @@ console.log(findIslamBooks);
 
 // 4.
 
-const reversNumbers = numbers.reverse();
-const reversIslamBooks = islamBooks.reverse();
+function getArrReverse(arr) {
+  return arr.reverse();
+}
 
-console.log(reversNumbers, reversIslamBooks);
+getArrReverse(islamBooks);
+getArrReverse(numbers);
+
+console.log(islamBooks);
+console.log(numbers);
 
 // УРОВЕНЬ.2
 // 7.
@@ -42,12 +48,7 @@ console.log(comSocialComments);
 // 8.
 
 const updatedSocialComments = socialComments.map(comment => {
-  if (comment.id <= 5) {
-    comment.postId = 2;
-  }
-  else {
-    comment.postId = 1;
-  }
+  comment.postId = comment.id <= 5 ? 2 : 1;
   return comment;
 });
 
@@ -66,17 +67,12 @@ console.log(lightSocialComments);
 
 // 10.
 
-const checkedSocialComments = socialComments.map(comment => {
-  if (comment.body.length > 180) {
-    comment.isInvalid = true;
-  }
-  else {
-    comment.isInvalid = false;
-  }
+const validatedComments = socialComments.map(comment => {
+  comment.isInvalid = comment.body.length > 180 ? true : false;
   return comment;
 });
 
-console.log(checkedSocialComments);
+console.log(validatedComments);
 
 // 11.
 // Вариант через .map()
@@ -90,7 +86,7 @@ const emailsWithReduce = socialComments.reduce((acc, comment) => {
   return acc;
 }, []);
 
-console.log(emailsWithReduce);
+console.log(emailsWithReduce); 
 
 // 12.
 // Вариант через .toString()

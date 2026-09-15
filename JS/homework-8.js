@@ -108,7 +108,7 @@ const superCarList = [
     made: "France",
     circulation: "limited",
   },
-  {
+  { 
     brand: "Koenigsegg",
     model: "Jesko Absolut",
     year: 2024,
