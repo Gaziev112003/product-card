@@ -19,31 +19,29 @@ console.log(productsDescriptions);
 
 
 function getCardTemplate(product) {
+  const template = document.querySelector('#card-template');
+  if (!template) return null;
 
-  const compoundItemsHtml = product.compound
-    .map(item => `<li>${item}</li>`)
-    .join('');
+  const cardClone = template.content.cloneNode(true);
+  const img = cardClone.querySelector('.card__image');
+  img.src = product.imgUrl;
+  img.alt = `Товар ${product.name}`;
 
-  return `
-    <div class="products__item card">
-      <img src="${product.imgUrl}" alt="Товар ${product.name}" class="card__image" width="290" height="245">
-      <h3 class="card__category">${product.category}</h3>
-      <h2 class="card__name">${product.name}</h2>
-      <div class="card__description">
-        <p>${product.description}</p>
-      </div>
-      <div class="card__compound compound">
-        <span class="compound__name">Состав:</span>
-        <ul class="compound__list clear-list">
-          ${compoundItemsHtml}
-        </ul>
-      </div>
-      <div class="card__price">
-        <b>Цена</b>
-        <span>${product.price.toLocaleString('ru-RU')} &#8381;</span>
-      </div>
-    </div>
-  `;
+  cardClone.querySelector('.card__category').textContent = product.category;
+  cardClone.querySelector('.card__name').textContent = product.name;
+  cardClone.querySelector('.card__description p').textContent = product.description;
+
+  const compoundList = cardClone.querySelector('.compound__list');
+  product.compound.forEach(itemText => {
+    const li = document.createElement('li');
+    li.textContent = itemText;
+    compoundList.append(li);
+  });
+
+ const formattedPrice = `${product.price.toLocaleString('ru-RU')} ₽`;
+  cardClone.querySelector('.card__price span').textContent = formattedPrice;
+
+  return cardClone;
 }
 
 
@@ -63,8 +61,10 @@ function renderProducts(productArray) {
   productsContainer.innerHTML = '';
   const countToDisplay = getCardsCountFromUser();
   const itemsToRender = productArray.slice(0, countToDisplay)
-  const finalHtml = itemsToRender.map(product => getCardTemplate(product)).join('');
-  productsContainer.innerHTML = finalHtml;
+  itemsToRender.forEach(product => {
+    const cardElement = createCardTemplate(product);
+    if (cardElement) {
+      productsContainer.append(cardElement);
+    }
+  });
 }
-
-renderProducts(productsList);
