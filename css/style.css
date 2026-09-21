@@ -41,6 +41,8 @@ body {
 
 .card__img {
   display: block;
+  width: 290px;
+  height: 245px;
 }
 
 .card__category {
