@@ -21,10 +21,10 @@ console.log(productsDescriptions);
 function getCardTemplate(product) {
   const template = document.querySelector('#card-template');
   if (!template) return null;
-
   const cardClone = template.content.cloneNode(true);
+
   const img = cardClone.querySelector('.card__image');
-  img.src = product.imgUrl;
+  img.src = `img/${product.image}.png`;
   img.alt = `Товар ${product.name}`;
 
   cardClone.querySelector('.card__category').textContent = product.category;
@@ -48,7 +48,7 @@ function getCardTemplate(product) {
 function getCardsCountFromUser() {
   const userInput = prompt('Сколько карточек отобразить? От 1 до 5');
   const count = parseInt(userInput, 10);
-  if (isNaN(count) || count > 5 || count < 0) {
+  if (isNaN(count) || count > 5 || count < 1) {
     alert("Ошибка! Вы ввели неверное значение. Будут показаны все 5 карточек.");
     return 5;
   }
@@ -62,9 +62,11 @@ function renderProducts(productArray) {
   const countToDisplay = getCardsCountFromUser();
   const itemsToRender = productArray.slice(0, countToDisplay)
   itemsToRender.forEach(product => {
-    const cardElement = createCardTemplate(product);
+    const cardElement = getCardTemplate(product);
     if (cardElement) {
       productsContainer.append(cardElement);
     }
   });
 }
+
+renderProducts(productsList);
