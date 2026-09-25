@@ -29,7 +29,7 @@ function getCardTemplate(product) {
 
   cardClone.querySelector('.card__category').textContent = product.category;
   cardClone.querySelector('.card__name').textContent = product.name;
-  cardClone.querySelector('.card__description p').textContent = product.description;
+  cardClone.querySelector('.card__description').textContent = product.description;
 
   const compoundList = cardClone.querySelector('.compound__list');
   product.compound.forEach(itemText => {
