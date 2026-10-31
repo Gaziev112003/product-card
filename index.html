@@ -18,6 +18,61 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+  <header>
+    <div class="header__container">
+      <button class="register-btn">
+        Регистрация
+      </button>
+    </div>
+
+    <!-- Модульное окно -->
+    <div class="modal overlay">
+      <div class="modal__body">
+        <!-- Кнопка для закрытия модалки -->
+        <button class="modal__close">&times;</button>
+        <!-- Форма -->
+        <form action="#" class="modal__form">
+          <!-- Поле: Имя -->
+          <div class="form-group">
+            <label class="form-group__label" for="regName">Имя:</label>
+            <input class="form-group__input" type="text" id="regName" placeholder="Введите ваше имя" required>
+          </div>
+          <!-- Поле: Фамилия -->
+          <div class="form-group">
+            <label class="form-group__label" for="regSurname">Фамилия:</label>
+            <input class="form-group__input" type="text" id="regSurname" placeholder="Введите вашу фамилию" required>
+          </div>
+          <!-- Поле: Дата рождения -->
+          <div class="form-group">
+            <label class="form-group__label" for="regDate">Дата рождения:</label>
+            <input class="form-group__input" type="date" id="regDate" required>
+          </div>
+          <!-- Поле: Логин -->
+          <div class="form-group">
+            <label class="form-group__label" for="regLogin">Логин:</label>
+            <input class="form-group__input" type="text" id="regLogin" placeholder="Придумайте логин" required minlength="3">
+          </div>
+          <!-- Поле: Пароль -->
+          <div class="form-group">
+            <label class="form-group__label" for="regPassword">Пароль:</label>
+            <input class="form-group__input" type="password" id="regPassword" placeholder="Введите пароль" required minlength="6">
+          </div>
+          <!-- Поле: Повтор пароля -->
+          <div class="form-group">
+            <label class="form-group__label" for="regPasswordConfirm">Повторение пароля:</label>
+            <input class="form-group__input" type="password" id="regPasswordConfirm" placeholder="Повторите пароль" required>
+          </div>
+          <!-- Кнопка для регистрации -->
+          <button type="submit" class="registr">
+            Зарегистрироваться
+          </button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+
+
   <main class="main">
     <div class="main__container container">
       <h1 class="main__title title">Выбери свой продукт</h1>
@@ -26,30 +81,25 @@
         <button class="buttons__change_color_first_card button">Cменить цвет карточки</button>
         <button class="buttons__change_color_all_cards button">Cменить цвет карточкам</button>
         <button class="buttons__open_google button">Oткрыть Google</button>
-        <button class="buttons__output_console_log button">Вывод СМС в консоль лог</button>
+        <button class="buttons__output_console_log button">Вывод СМS в консоль лог</button>
         <button class="buttons__change_and_back_color button">Поменять/Вернуть</button>
       </div>
+      <!-- витрина куда js будет в ставлять карточки -->
+      <div class="products clear-list"></div>
+    </div>
+  </main>
 
-      <div class="products clear-list">
-        <div class="products__item card">
-          <img src="img/Moisturizing_mousse.png" alt="Товар Увлажняющий мусс" class="card__image" width="290" height="245">
-          <h3 class="card__category">для нормальной кожи</h3>
-          <h2 class="card__name">Увлажняющий мусс</h2>
-          <div class="card__description">
-            <p>Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой.</p>
-          </div>
-          <div class="card__compound compound">
-            <span class="compound__name">Состав:</span>
-            <ul class="compound__list clear-list">
-              <li>активные натуральные комплексы</li>
-              <li>витамины С, А, РР, В И Е</li>
-              <li>солнцезащитные компоненты</li>
-            </ul>
-          </div>
-          <div class="card__price">
-            <b>Цена</b>
-            <span>2 750 &#8381;</span>
-          </div>
+  <template id="card-template">
+    <div class="card-wrapper">
+      <div class="products__item card">
+        <img src="" alt="" class="card__image">
+        <h3 class="card__category"></h3>
+        <h2 class="card__name"></h2>
+        <div class="card__description"></div>
+        <div class="card__compound compound">
+          <span class="compound__name">Состав:</span>
+          <ul class="compound__list clear-list">
+          </ul>
         </div>
 
 
@@ -141,6 +191,53 @@
         </div>
       </div>
     </div>
-  </main>
+  </template>
+
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__column footer__column--info">
+        <h3 class="footer__title">Product Cards</h3>
+        <p class="footer__description">У нас самые лучшие продукты для кожи!</p>
+        <div class="footer__socials">
+          <a href="#" class="footer__social-link--tg"><img src="/product-card/img/telegram.png"></a>
+          <a href="#" class="footer__social-link--vk"><img src="/product-card/img/vk.png"></a>
+        </div>
+      </div>
+
+      <div class="footer__column footer__column--form">
+        <form action="#" class="footer__form form" id="footer__form">
+          <span class="form__title">Подпишись на наши акции:</span>
+          <div class="form__wrapper">
+            <input type="email" class="form__input" id="footer__input" placeholder="Введи Email..." required>
+            <button type="submit" class="form__button">Подписаться</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="footer__column footer__column--nav">
+        <nav class="footer__nav nav">
+          <span class="nav__title">Быстрые ссылки</span>
+          <ul class="nav__menu">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Магазин</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__divider"></div>
+      <p class="footer__copyright">www.product-cards.com © all right reserve</p>
+    </div>
+    
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/homework-7.js"></script>
+  <script src="js/homework-8.js"></script>
+  <script type="module" src="js/homework-9.js"></script>
+  <script type="module" src="js/homework-10.js"></script>
+  <script src="js/homework-11.js"></script>
 </body>
 </html>
