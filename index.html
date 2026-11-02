@@ -20,6 +20,61 @@
 </head>
 
 <body>
+  <header>
+    <div class="header__container">
+      <button class="register-btn">
+        Регистрация
+      </button>
+    </div>
+
+    <!-- Модульное окно -->
+    <div class="modal overlay">
+      <div class="modal__body">
+        <!-- Кнопка для закрытия модалки -->
+        <button class="modal__close">&times;</button>
+        <!-- Форма -->
+        <form action="#" class="modal__form">
+          <!-- Поле: Имя -->
+          <div class="form-group">
+            <label class="form-group__label" for="regName">Имя:</label>
+            <input class="form-group__input" type="text" id="regName" placeholder="Введите ваше имя" required>
+          </div>
+          <!-- Поле: Фамилия -->
+          <div class="form-group">
+            <label class="form-group__label" for="regSurname">Фамилия:</label>
+            <input class="form-group__input" type="text" id="regSurname" placeholder="Введите вашу фамилию" required>
+          </div>
+          <!-- Поле: Дата рождения -->
+          <div class="form-group">
+            <label class="form-group__label" for="regDate">Дата рождения:</label>
+            <input class="form-group__input" type="date" id="regDate" required>
+          </div>
+          <!-- Поле: Логин -->
+          <div class="form-group">
+            <label class="form-group__label" for="regLogin">Логин:</label>
+            <input class="form-group__input" type="text" id="regLogin" placeholder="Придумайте логин" required minlength="3">
+          </div>
+          <!-- Поле: Пароль -->
+          <div class="form-group">
+            <label class="form-group__label" for="regPassword">Пароль:</label>
+            <input class="form-group__input" type="password" id="regPassword" placeholder="Введите пароль" required minlength="6">
+          </div>
+          <!-- Поле: Повтор пароля -->
+          <div class="form-group">
+            <label class="form-group__label" for="regPasswordConfirm">Повторение пароля:</label>
+            <input class="form-group__input" type="password" id="regPasswordConfirm" placeholder="Повторите пароль" required>
+          </div>
+          <!-- Кнопка для регистрации -->
+          <button type="submit" class="registr">
+            Зарегистрироваться
+          </button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+
+
   <main class="main">
     <div class="main__container container">
       <h1 class="main__title title">Выбери свой продукт</h1>
@@ -28,7 +83,7 @@
         <button class="buttons__change_color_first_card button">Cменить цвет карточки</button>
         <button class="buttons__change_color_all_cards button">Cменить цвет карточкам</button>
         <button class="buttons__open_google button">Oткрыть Google</button>
-        <button class="buttons__output_console_log button">Вывод СМС в консоль лог</button>
+        <button class="buttons__output_console_log button">Вывод СМS в консоль лог</button>
         <button class="buttons__change_and_back_color button">Поменять/Вернуть</button>
       </div>
       <!-- витрина куда js будет в ставлять карточки -->
