@@ -90,11 +90,12 @@ console.log(emailsWithReduce);
 
 // 12.
 // Вариант через .toString()
-const emailWithToString = socialComments.email.toString();
+const emailWithToString = emailsWithMap.toString();
 
 console.log(emailWithToString);
 
 // Вариант через .join()
-const emailWithJoin = socialComments.email.join(', ');
+const emailWithJoin = emailsWithReduce.join(', ');
 
 console.log(emailWithJoin);
+

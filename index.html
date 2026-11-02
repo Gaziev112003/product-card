@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <header>
     <div class="header__container">
@@ -88,7 +90,6 @@
       <div class="products clear-list"></div>
     </div>
   </main>
-
   <template id="card-template">
     <div class="card-wrapper">
       <div class="products__item card">
@@ -101,143 +102,18 @@
           <ul class="compound__list clear-list">
           </ul>
         </div>
-
-
-        <div class="products__item card">
-          <img src="img/Moisturizing_mask.png" alt="Товар Увлажняющая маска" class="card__image" width="290" height="245">
-          <h3 class="card__category">для нормальной кожи</h3>
-          <h2 class="card__name">Увлажняющая маска</h2>
-          <div class="card__description">
-            <p>Способствует удерживанию влаги в верхних слоях кожи.</p>
-          </div>
-          <div class="card__compound compound">
-            <span class="compound__name">Состав:</span>
-            <ul class="compound__list clear-list">
-              <li>воски</li>
-              <li>минералы</li>
-              <li>масла</li>
-            </ul>
-          </div>
-          <div class="card__price">
-            <b>Цена</b>
-            <span>3 500 &#8381;</span>
-          </div>
-        </div>
-
-
-        <div class="products__item card">
-          <img src="img/Cleansing_gel.png" alt="Товар Гель для умывания" class="card__image" width="290" height="245">
-          <h3 class="card__category">для нормальной кожи</h3>
-          <h2 class="card__name">Гель для умывания</h2>          
-          <div class="card__description">
-            <p>Интенсивно очищает, не повреждает защитный барьер кожи.</p>
-          </div>
-          <div class="card__compound compound">
-            <span class="compound__name">Состав:</span>
-            <ul class="compound__list clear-list">
-              <li>минералы</li>
-              <li>витамины С, А, РР, В И Е</li>
-              <li>солнцезащитные компоненты</li>
-            </ul>
-          </div>
-          <div class="card__price">
-            <b>Цена</b>
-            <span>1 650 &#8381;</span>
-          </div>
-        </div>
-
-
-        <div class="products__item card">
-          <img src="img/Gift_Set_1.png" alt="Товар Подарочный набор №1" class="card__image" width="290" height="245">
-          <h3 class="card__category">для нормальной кожи</h3>
-          <h2 class="card__name">Подарочный набор №1</h2>        
-          <div class="card__description">
-            <p>Набор, состоящий из увлажняющего крема и маски.</p>
-          </div>
-          <div class="card__compound compound">
-            <span class="compound__name">Состав:</span>
-            <ul class="compound__list clear-list">
-              <li>воски</li>
-              <li>минералы</li>
-              <li>масла</li>
-            </ul>
-          </div>
-          <div class="card__price">
-            <b>Цена</b>
-            <span>4 750 &#8381;</span>
-          </div>
-        </div>
-
-
-        <div class="products__item card">
-          <img src="img/Gift_Set_5.png" alt="Товар Подарочный набор №5" class="card__image" width="290" height="245">
-          <h3 class="card__category">для нормальной кожи</h3>
-          <h2 class="card__name">Подарочный набор №5</h2>          
-          <div class="card__description">
-            <p>Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания.</p>
-          </div>
-          <div class="card__compound compound">
-            <span class="compound__name">Состав:</span>
-            <ul class="compound__list clear-list">
-              <li>воски</li>
-              <li>минералы</li>
-              <li>масла</li>
-            </ul>
-          </div>
-          <div class="card__price">
-            <b>Цена</b>
-            <span>7 520 &#8381;</span>
-          </div>
+        <div class="card__price">
+          <b>Цена</b>
+          <span></span>
         </div>
       </div>
     </div>
   </template>
-
-  <footer class="footer">
-    <div class="footer__container">
-      <div class="footer__column footer__column--info">
-        <h3 class="footer__title">Product Cards</h3>
-        <p class="footer__description">У нас самые лучшие продукты для кожи!</p>
-        <div class="footer__socials">
-          <a href="#" class="footer__social-link--tg"><img src="/product-card/img/telegram.png"></a>
-          <a href="#" class="footer__social-link--vk"><img src="/product-card/img/vk.png"></a>
-        </div>
-      </div>
-
-      <div class="footer__column footer__column--form">
-        <form action="#" class="footer__form form" id="footer__form">
-          <span class="form__title">Подпишись на наши акции:</span>
-          <div class="form__wrapper">
-            <input type="email" class="form__input" id="footer__input" placeholder="Введи Email..." required>
-            <button type="submit" class="form__button">Подписаться</button>
-          </div>
-        </form>
-      </div>
-
-      <div class="footer__column footer__column--nav">
-        <nav class="footer__nav nav">
-          <span class="nav__title">Быстрые ссылки</span>
-          <ul class="nav__menu">
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Магазин</a></li>
-            <li><a href="#">Контакты</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-
-    <div class="footer__bottom">
-      <div class="footer__divider"></div>
-      <p class="footer__copyright">www.product-cards.com © all right reserve</p>
-    </div>
-    
-  </footer>
-
   <script src="js/main.js"></script>
   <script src="js/homework-7.js"></script>
   <script src="js/homework-8.js"></script>
   <script type="module" src="js/homework-9.js"></script>
   <script type="module" src="js/homework-10.js"></script>
-  <script src="js/homework-11.js"></script>
 </body>
+
 </html>
